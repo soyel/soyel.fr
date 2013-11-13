@@ -1,0 +1,23 @@
+sonata_news:
+    title:        Dashboard
+    link:         https://admin.soyel.fr
+    description:  Admin dashboard for soyel.fr website
+    salt:         'DaymnItsSupposedToBeSecret'
+    permalink_generator: sonata.news.permalink.collection # sonata.news.permalink.collection
+
+    comment:
+        notification:
+            emails:   [email@example.org, email2@example.org]
+            from:     no-reply@sonata-project.org
+            template: 'SonataNewsBundle:Mail:comment_notification.txt.twig'
+
+doctrine:
+    orm:
+        entity_managers:
+            default:
+                #metadata_cache_driver: apc
+                #query_cache_driver: apc
+                #result_cache_driver: apc
+                mappings:
+                    SonataNewsBundle: ~
+                    ApplicationSonataNewsBundle: ~
