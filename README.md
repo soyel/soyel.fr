@@ -1,5 +1,4 @@
-Website
-=======
+# soyel.fr website
 
 Based on :
 
@@ -9,3 +8,21 @@ Based on :
 * Bootstrap
 * Awesome Fonts
 * JQuery
+
+## Install process
+
+First of all, install needed vendors.
+
+   php composer update
+
+Get your own parameters.yml
+
+   cd app/config
+   mv parameters.yml.dist parameters.yml
+
+Modify the content of the parameters.yml files to reflect your needs.
+
+## License
+
+This website source code is under the WTFPL. All external vendors projects are
+under their own license.
