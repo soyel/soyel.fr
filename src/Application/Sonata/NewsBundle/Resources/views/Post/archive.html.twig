@@ -1,16 +1,6 @@
-{#
+{% extends '::base.html.twig' %}
 
-/*
- * This file is part of the Sonata package.
- *
- * (c) Thomas Rabaix <thomas.rabaix@sonata-project.org>
- *
- * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
- */
-
-#}
-
+{% block body %}
 <h1>{{ 'title_archive'|trans({}, 'SonataNewsBundle') }}</h1>
 
 <div class="sonata-blog-post-list">
@@ -65,3 +55,4 @@
         <li{% if pager.page == pager.firstPage %} class="disabled"{% endif %}><a href="{{ url(route, route_parameters|merge({'page': pager.previouspage})) }}" title="{{ 'link_next_page'|trans({}, 'SonataNewsBundle') }}">{{ 'link_next_page'|trans({}, 'SonataNewsBundle') }}</a></li>
     </ul>
 </div>
+{% endblock body %}
