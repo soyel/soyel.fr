@@ -37,4 +37,14 @@ class Post extends BasePost
     {
         return $this->id;
     }
+	
+	public function getImage()
+	{
+		return $this->image;
+	}
+	
+	public function setImage($image)
+	{
+		$this->image = $image;
+	}
 }
