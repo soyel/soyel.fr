@@ -18,7 +18,7 @@
             <span class="sonata-blog-post-author">{{ 'archive_author'|trans({'%author%': post.author }, 'SonataNewsBundle') }}</span>
         </h1>
 
-		{% media media, 'big' %}
+		{% media post.image, 'big' %}
 		
         <div class="sonata-blog-post-date-container">
             <h5>
