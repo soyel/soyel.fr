@@ -27,8 +27,10 @@ class Media extends BaseMedia
      * @var integer $id
      */
     protected $id;
+	
+	protected $image;
 
-    /**
+	/**
      * Get id
      *
      * @return integer $id
