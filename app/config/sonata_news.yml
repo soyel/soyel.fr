@@ -1,8 +1,8 @@
 sonata_news:
-    title:        Dashboard
-    link:         https://admin.soyel.fr
-    description:  Admin dashboard for soyel.fr website
-    salt:         'DaymnItsSupposedToBeSecret'
+    title:        Soyel's Blog
+    link:         https://blog.soyel.fr
+    description:  A blog about my journey in the real and the digital world
+    salt:         %secret%
     permalink_generator: sonata.news.permalink.collection # sonata.news.permalink.collection
 
     comment:
