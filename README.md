@@ -6,21 +6,21 @@ Based on :
 * Sonata Project
 * HTML5 Boilerplate
 * Bootstrap
-* Awesome Fonts
 * JQuery
+* Markitup!
 
 ## Install process
 
-First of all, install needed vendors.
+First of all, install needed vendors with composer.
 
-   php composer update
+    php composer update
 
 Get your own parameters.yml
 
-   cd app/config
-   mv parameters.yml.dist parameters.yml
+    cd app/config
+    mv parameters.yml.dist parameters.yml
 
-Modify the content of the parameters.yml files to reflect your needs.
+Modify the content of the `parameters.yml` files to reflect your needs.
 
 ## License
 
