@@ -8,19 +8,20 @@ Based on :
 * Bootstrap
 * JQuery
 * Markitup!
+* And much more...
 
 ## Install process
 
-First of all, install needed vendors with composer.
+First of all, install needed vendors with [Composer](http://getcomposer.org/).
 
-    php composer update
+    php composer.phar update
 
 Get your own parameters.yml
 
     cd app/config
     mv parameters.yml.dist parameters.yml
 
-Modify the content of the `parameters.yml` files to reflect your needs.
+Modify the content of the `parameters.yml` file to reflect your needs.
 
 ## License
 
