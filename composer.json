@@ -1,9 +1,17 @@
 {
-    "name": "symfony/framework-standard-edition",
-    "license": "MIT",
+    "name": "soyel/soyel.fr",
+    "license": "WTFPL",
     "type": "project",
-    "description": "The \"Symfony Standard Edition\" distribution",
-    "autoload": {
+    "description": "Open source website based on open sources projects ;-)",
+	"homepage": "http://github.com/soyel/soyel.fr",
+	"author": [
+		{
+			"name": "soyel",
+			"homepage": "http://soyel.fr",
+			"role": "Developer"
+		}
+	],
+	"autoload": {
         "psr-0": { "": "src/" }
     },
     "require": {
