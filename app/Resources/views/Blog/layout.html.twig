@@ -1,0 +1,31 @@
+{% extends '::base.html.twig' %}
+
+{% block body %}
+		<main>
+			<header>
+				<h1>Soyel's blog</h1>
+				<p><a href="{{ url('sonata_news_archive', {'_format': 'rss'})}}">RSS</a></p>
+			</header>
+{% block content %}{% endblock %}
+		</main>
+		<footer>
+			<p id="github-banner"><a href="https://github.com/soyel/soyel.fr">Fork me on GitHub</a></p>
+			<section id="external-links">
+				<ul>
+					<li>Blog</li>
+					<li>Contact (à faire)</li>
+					<li>Portfolio (à faire)</li>
+					<li>Projets (à faire)</li>
+				</ul>
+				<ul>
+					<li>Github</li>
+					<li>Twitter</li>
+					<li>HTML5</li>
+					<li>CSS3</li>
+				</ul>
+			</section>
+			<section id="mention-legale">
+				<p>Soyel 2013 (¢). Libre de tous droits (sauf explicitement indiqué).</p>
+			</section>
+		</footer>
+{% endblock %}
