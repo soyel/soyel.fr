@@ -1,58 +1,35 @@
-{% extends '::base.html.twig' %}
+{% extends ':Blog:layout.html.twig' %}
 
-{% block body %}
+{% block content %}
+			<article class="sonata-blog-post-container">
+				<time datetime="{{ post.publicationDateStart | date(constant('DATE_W3C')) }}">
+					</i>{{ post.publicationDateStart | format_date }}
+				</time>
+				<header>
+					<h2 title="{{ post.title }}">{{ post.title }}</h2>
+					<p>
+						<i class="fa fa-tags"></i>
+{% for tag in post.tags %}
+						<a class='tag' href="{{ url('sonata_news_tag', { 'tag': tag.slug } ) }}">{{ tag.name }}</a>
+{% endfor %}
+					</p>
+				</header>
+				{% media post.image, 'big' %}
+				<div class="sonata-blog-post-content">
+					{{ post.content|raw }}
+				</div>
 
-<article class="sonata-blog-post-container">
-    <header>
-        <h1 class="sonata-blog-post-title">
-            <a href="{{ url('sonata_news_view', { 'permalink': sonata_news_permalink(post) }) }}">{{ post.title }}</a>
-            <span class="sonata-blog-post-author">{{ 'archive_author'|trans({'%author%': post.author }, 'SonataNewsBundle') }}</span>
-        </h1>
+				{% render(controller('SonataNewsBundle:Post:comments', {'postId': post.id})) %}
 
-		{% media post.image, 'big' %}
-		
-        <div class="sonata-blog-post-date-container">
-            <h5>
-                <i class="icon-calendar"></i>
-                {{ post.publicationDateStart | format_date }}
-            </h5>
-        </div>
-		
-        <div class="sonata-blog-post-information">
-            <div class="sonata-blog-post-tag-container">
-                <div class="sonata-blog-post-tag-title">
-                    {% if post.tags|length > 1 %}
-                        <i class="icon-tags"></i>
-                    {% else %}
-                        <i class="icon-tag"></i>
-                    {% endif %}
-                    {{ 'published_under'|transchoice(post.tags|length, {}, 'SonataNewsBundle') }}
-                </div>
-                <div class="sonata-blog-post-tag-list">
-                    {% for tag in post.tags %}
-                        <a href="{{ url('sonata_news_tag', { 'tag': tag.slug } ) }}">{{ tag.name }}</a>
-                    {% endfor %}
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <div class="sonata-blog-post-content">
-        {{ post.content|raw }}
-    </div>
-
-    {% render(controller('SonataNewsBundle:Post:comments', {'postId': post.id})) %}
-
-    {% if post.iscommentable %}
-        {% render(controller('SonataNewsBundle:Post:addCommentForm', {
-            'postId': post.id,
-            'form': form
-        })) %}
-    {% else %}
-        <div>
-            {{ 'message_comments_are_closed'|trans({}, 'SonataNewsBundle') }}
-        </div>
-    {% endif %}
-</article>
-
+				{% if post.iscommentable %}
+					{% render(controller('SonataNewsBundle:Post:addCommentForm', {
+						'postId': post.id,
+						'form': form
+					})) %}
+				{% else %}
+					<div>
+						{{ 'message_comments_are_closed'|trans({}, 'SonataNewsBundle') }}
+					</div>
+				{% endif %}
+			</article>
 {% endblock %}
