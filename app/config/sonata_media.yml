@@ -15,14 +15,14 @@ sonata_media:
                 - sonata.media.provider.file
             formats:
                 small: { width: 150 , quality: 95 }
-                big:   { width: 500 , quality: 90 }
+                big:   { width: 870 , quality: 90 }
                 
         news:
             providers:
                 - sonata.media.provider.image
             formats:
                 small: { width: 150 , quality: 95 }
-                big:   { width: 500 , quality: 90 }
+                big:   { width: 870 , quality: 90 }
                 
     cdn:
         server:
