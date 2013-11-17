@@ -10,3 +10,7 @@
 /bin/
 /composer.phar
 /web/uploads/media
+/web/css/compiled_part_*.css
+/web/js/compiled_part_*.js
+/app/Resources/java/*
+!app/Resources/java/.gitkeep
