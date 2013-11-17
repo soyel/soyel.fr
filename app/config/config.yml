@@ -50,11 +50,16 @@ assetic:
     assets:
         stylesheets:
             inputs:
+                - %kernel.root_dir%/../web/css/vendor/font-awesome.min.css
+                - %kernel.root_dir%/../web/css/vendor/monokai.css
                 - %kernel.root_dir%/../web/css/normalize.css
                 - %kernel.root_dir%/../web/css/main.css
             filters: ?yui_css
         javascripts:
             inputs:
+                - %kernel.root_dir%/../web/js/vendor/jquery-1.10.2.min.js
+                - %kernel.root_dir%/../web/js/vendor/modernizr-2.6.2.min.js
+                - %kernel.root_dir%/../web/js/vendor/highlight.pack.js
                 - %kernel.root_dir%/../web/js/plugins.js
                 - %kernel.root_dir%/../web/js/main.js
             filters: ?yui_js
