@@ -65,7 +65,7 @@ class PostAdmin extends Admin
                 ->add('collection', 'sonata_type_model_list', array('required' => false))
                 ->add('title')
                 ->add('abstract', null, array('attr' => array('class' => 'span6', 'rows' => 5)))
-				->add('image', 'sonata_type_model_list', array(), array('link_parameters' => array('context' => 'news')))
+				->add('image', 'sonata_type_model_list', array('required' => false), array('link_parameters' => array('context' => 'news')))
                 ->add('content', 'sonata_formatter_type', array(
                     'event_dispatcher' => $formMapper->getFormBuilder()->getEventDispatcher(),
                     'format_field'   => 'contentFormatter',
